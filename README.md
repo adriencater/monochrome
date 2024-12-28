@@ -13,6 +13,8 @@ Demo code. Should be adapted to the needs of your project.
 	}
 ```
 
+Demo at: [adriencater.github.io/monochrome/](https://adriencater.github.io/monochrome/)
+
 - - - - -
 
 We use a class `monochrome` on the `<img>` elements we want to modify.
