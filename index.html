@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>monochrome</title>
+	<style>
+	
+		/* Monochrome images - - - - - - - - - - - - - */
+		:has( > img.monochrome){
+			background-color: #F1357A; /* default color */
+		}
+		img.monochrome{ 
+			filter: grayscale(100%); 
+			mix-blend-mode: overlay;
+		}
+		/* - - - - - - - - - - - - - - - - - - - - - - */
+
+
+		/* define other colors on parents as necessary */
+		:has( > img.monochrome.magenta) { background-color: #817; } /* use a class, probably */
+		:has( > img.monochrome.carmine) { background-color: #a35; }
+		:has( > img.monochrome.tangelo) { background-color: #c66; }
+		:has( > img.monochrome):nth-child( 4) { background-color: #e94; }
+		:has( > img.monochrome):nth-child( 5) { background-color: #ed0; }
+		:has( > img.monochrome):nth-child( 6) { background-color: #9d5; }
+		:has( > img.monochrome):nth-child( 7) { background-color: #4d8; }
+		:has( > img.monochrome):nth-child( 8) { background-color: #2cb; }
+		:has( > img.monochrome):nth-child( 9) { background-color: #0bc; }
+		:has( > img.monochrome):nth-child(10) { background-color: #09c; }
+		:has( > img.monochrome):nth-child(11) { background-color: #36b; }
+		:has( > img.monochrome):nth-child(12) { background: linear-gradient(#36b, #639, #a35); }
+
+	</style>
+</head>
+<body>
+	<div><img class="monochrome magenta" 	src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Dead-Man%27s_Curve_in_Lebec%2C_California%2C_2010.jpg/2560px-Dead-Man%27s_Curve_in_Lebec%2C_California%2C_2010.jpg"></div>
+	<div><img class="monochrome carmine" 	src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Bliss_hill_July_2017.jpg/1024px-Bliss_hill_July_2017.jpg"></div>
+	<div><img class="monochrome tangelo" 	src="https://upload.wikimedia.org/wikipedia/commons/b/b6/Cushion.jpg"></div>
+	<div><img class="monochrome" 			src="https://upload.wikimedia.org/wikipedia/commons/5/59/CN12003.jpg"></div>
+	<div><img class="monochrome" 			src="https://upload.wikimedia.org/wikipedia/commons/f/ff/Macroblocking_error.png"></div>
+	<div><img class="monochrome" 			src="https://upload.wikimedia.org/wikipedia/commons/7/74/IMG_7474_solar_glory.JPG"></div>
+	<div><img class="monochrome" 			src="https://upload.wikimedia.org/wikipedia/commons/8/80/AVE-Mizar-1973-N68X-XL.jpg"></div>
+	<div><img class="monochrome" 			src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Pontcysyllte_aqueduct_arp.jpg/1280px-Pontcysyllte_aqueduct_arp.jpg"></div>
+	<div><img class="monochrome" 			src="https://upload.wikimedia.org/wikipedia/commons/e/ee/Omar_Sharif%2C_Tom_Townsend.jpg"></div>
+	<div><img class="monochrome" 			src="https://upload.wikimedia.org/wikipedia/commons/1/19/KrasAir_Ilyushin_Il-96_spotting_Mishin.jpg"></div>
+	<figure><img class="monochrome" 		src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Apollo_16_rocks.jpg/1024px-Apollo_16_rocks.jpg"></figure>
+	<section><img class="monochrome" 		src="https://upload.wikimedia.org/wikipedia/commons/e/eb/La_Trahison_des_images.jpg"></section>
+</body>
+</html>
+
+
+
+
+<!-- - - - - page layout only for this page… - - - - - - -->
+<style>
+	body{ 
+		min-height: 100vh; 
+		margin: 0; 
+		display: flex; 
+		flex-wrap: wrap; 
+		font-family: system-ui;
+	}
+	body > * {
+		width:calc(100vw/3) !important; /* just this once, I promise. */
+		height: 25vh !important;
+	}
+	figure { margin:0; }
+
+	img.monochrome{ 
+		display: block;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+
+		mix-blend-mode: luminosity; 
+		filter: 
+			grayscale(100%) 
+			contrast(67%) 
+			brightness(115%)
+		;
+	}
+</style>
