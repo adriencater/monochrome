@@ -3,12 +3,12 @@
 Demo code. Should be adapted to the needs of your project.
 
 ```
-	:has( > img.monochrome){
+	:has( > img.monochrome) {
 		background-color: #f1357a; /* default color */
 	}
 
-	img.monochrome{ 
-		filter: grayscale(100%); 
+	img.monochrome { 
+		filter: grayscale(100%);
 		mix-blend-mode: overlay;
 	}
 ```
@@ -17,19 +17,19 @@ Demo at: [adriencater.github.io/monochrome/](https://adriencater.github.io/monoc
 
 - - - - -
 
-We use a class `monochrome` on the `<img>` elements we want to modify.
+This example uses a class `monochrome` on the `<img>` elements to be modified.
 
-It is important that they be wrapped in a `<div>` or other parent element: this is where we will apply the color.
+It is important that the images be wrapped in a `<div>` or other parent element: this is where the color will applied, as a background.
 
-This example uses a 'parent selector' `*:has( > img.monochrome)` to select the enclosing parent elemnts of monochrome images and give them a background color. (that way, you can use any parent elements you want/have, and you only need to apply the monochrome class once, on the image itself.)
+This example uses a ‘parent selector’ `*:has( > img.monochrome)` to select the enclosing parent elemnts of .monochrome images. By using a ‘parent selector’, the .monochrome class only needs to be applied once, and on the image element directly.
 
-The default color will apply to all images. Override this with other declarations as necesary if more variety is necessary.
+In the example above, the default color will apply to all images. This can be changed or overriden with other declarations.
 
-We use CSS color filters and mix-blend-modes to mix the image and background color, which should be adapted to the needs of your project. 
+This example uses the CSS **`filter`** and **`mix-blend-mode`** to combine the image and background color – these should be adapted to the needs of the project. 
 
-Applying `filter: grayscale(100%);` is a good idea, but you can add other filters if you need.
+Applying `filter: grayscale(100%);` gives a standard effect, but other filters can be used or added for different effects.
 
-The mix-blend-mode will give different results depending on the original image (brighness, contrast) and the desired effect.
+The mix-blend-mode can be tuned give different results depending on the original image (brighness, contrast) and the desired effect.
 
 - - - - --
 
